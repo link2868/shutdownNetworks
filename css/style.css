@@ -1,43 +1,52 @@
 body {
-    font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to right, #FFBD71, #FEEED6, #FFB14F);
-    max-width: 1800px;
-    margin: 0 auto;
-
-} 
-
-.wrapper {
-    margin: 0 auto;
-    padding: 80px;
+  font-family: "Roboto", sans-serif;
+  background: linear-gradient(to right, #ffbd71, #feeed6, #ffb14f);
+  max-width: 1900px;
+  margin: 0 auto;
 }
 
-.header{
-margin-bottom: 40px;
+.wrapper {
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.header {
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 h1 {
-    font-style: normal;
-    font-weight: 400;
-    font-size: 21px;
-    color: #000000;
-    text-align: center;
-  }
+  max-width: 800px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 22px;
+  color: #000000;
+  text-align: center;
+  margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
 p {
-    font-style: normal;
-    font-weight: 300;
-    font-size: 14px;
-    color: #000000; 
-    text-align: center;
-}  
+  max-width: 700px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: #000000;
+  text-align: center;
+  margin: auto;
+  margin-top: 40px;
+  padding-left: 40px;
+  padding-right: 40px;
+}
 
-.queue, .people {
-    width: 700px;
-    height: 400px;
-    background-color: #e5e5e5;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 20px;
-    
+.queue,
+.disabled_consumers {
+  width: 50%;
+  height: 400px;
+  background-color: #e5e5e5;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 20px;
 }
 
 .shotdovn {
@@ -46,9 +55,57 @@ p {
 }
 
 .inform {
-    height: 40px;
-    background-color: #FFB14F;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin: 40px 20px 0px 20px;
-    display: none;
+  height: 40px;
+  background-color: #ffb14f;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  margin: 40px 20px 20px 20px;
+  display: block;
+}
+
+@media (max-width: 1900px) {
+}
+
+@media (max-width: 1600px) {
+}
+
+@media (max-width: 1400px) {
+}
+
+@media (max-width: 1200px) {
+}
+
+@media (max-width: 992px) {
+  .wrapper {
+    padding: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper {
+    padding: 0px;
+  }
+  .shotdovn {
+    display: block;
+  }
+  .queue,
+  .disabled_consumers {
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+  }
+  .inform {
+    margin: 20px 0px 20px 0px;
+  }
+}
+@media (max-width: 480px) {
+  h1 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 320px) {
+  h1 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
 }
