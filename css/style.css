@@ -7,7 +7,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 80px 20px 80px;
 }
 
 .header {
@@ -27,7 +27,19 @@ h1 {
   padding-right: 40px;
 }
 
-p {
+h2 {
+  max-width: 600px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: #000000;
+  text-align: center;
+  margin: auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.header p {
   max-width: 700px;
   font-style: normal;
   font-weight: 300;
@@ -40,18 +52,122 @@ p {
   padding-right: 40px;
 }
 
+.shotdovn p {
+  max-width: 700px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  color: #000000;
+  text-align: left;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 5px;
+}
+
 .queue,
 .disabled_consumers {
   width: 50%;
-  height: 400px;
   background-color: #e5e5e5;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   margin: 20px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 }
 
 .shotdovn {
   display: flex;
   justify-content: stretch;
+}
+
+.container_tabs {
+  display: flex;
+}
+
+.tabs ul {
+  margin-top: 40px;
+  list-style: none;
+  padding-left: 0px;
+}
+.tabs li {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 12px;
+  color: #000000;
+  padding-top: 12px;
+  height: 20px;
+  width: 100px;
+  border-bottom: solid 1px #ffbd71;
+  cursor: pointer;
+}
+
+.tabs_point {
+  padding-left: 5px;
+}
+
+.household,
+.juristic,
+.all_consumers {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.what_a_queue {
+  display: block;
+  height: 30px;
+  min-width: 220px;
+  border: solid 1px #ffbd71;
+  background-color: #ffb14f;
+  border-radius: 30px;
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text_button {
+  max-width: 700px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  color: #ffffff;
+}
+
+.household input,
+.juristic input,
+.all_consumers .address_city {
+  padding-left: 5px;
+  font-style: italic;
+  height: 25px;
+  min-width: 220px;
+  border: solid 1px #929190;
+  border-radius: 3px;
+}
+
+.all_consumers .address_street {
+  padding-left: 5px;
+  font-style: italic;
+  height: 25px;
+  min-width: 165px;
+  border: solid 1px #929190;
+  border-radius: 3px;
+  margin-top: 5px;
+}
+
+.all_consumers .address_house {
+  padding-left: 5px;
+  font-style: italic;
+  height: 25px;
+  min-width: 40px;
+  border: solid 1px #929190;
+  border-radius: 3px;
+  margin-top: 5px;
+  margin-left: 5px;
+}
+
+.address_street_house {
+  display: flex;
+}
+.address_street {
+  display: block;
 }
 
 .inform {
@@ -62,25 +178,28 @@ p {
   display: block;
 }
 
-@media (max-width: 1900px) {
+.household {
+  display: block;
 }
 
-@media (max-width: 1600px) {
+.juristic {
+  display: none;
 }
 
-@media (max-width: 1400px) {
+.all_consumers {
+  display: none;
 }
 
-@media (max-width: 1200px) {
-}
-
-@media (max-width: 992px) {
-  .wrapper {
-    padding: 5px;
+@media (max-width: 320px) {
+  body {
+    width: 320px;
   }
-}
-
-@media (max-width: 768px) {
+  h1 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
   .wrapper {
     padding: 0px;
   }
@@ -96,16 +215,75 @@ p {
     margin: 20px 0px 20px 0px;
   }
 }
-@media (max-width: 480px) {
-  h1 {
-    font-size: 18px;
-  }
-}
-@media (max-width: 320px) {
+
+@media (min-width: 321px) and (max-width: 479px) {
   h1 {
     font-size: 16px;
   }
   p {
     font-size: 13px;
   }
+  .wrapper {
+    padding: 0px;
+  }
+
+  .shotdovn {
+    display: block;
+  }
+
+  .queue,
+  .disabled_consumers {
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+  }
+
+  .inform {
+    margin: 20px 0px 20px 0px;
+  }
 }
+
+@media (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .wrapper {
+    padding: 0px;
+  }
+  .shotdovn {
+    display: block;
+  }
+  .queue,
+  .disabled_consumers {
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+  }
+  .inform {
+    margin: 20px 0px 20px 0px;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 18px;
+  }
+  .wrapper {
+    padding: 5px;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+}
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+}
+
+@media (min-width: 1400px) and (max-width: 1599px) {
+}
+
+@media (min-width: 1600px) and (max-width: 1900px) {
+  
+}
+

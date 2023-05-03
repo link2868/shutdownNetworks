@@ -18,7 +18,7 @@
   </head>
   <body>
     <div class="wrapper">
-      <div class="header">
+      <header class="header">
         <h1>
           Вимкнення в мережах АТ "Прикарпаттяобленерго", пов'язані з введенням
           графіків аварійних та погодинних вимкнень споживачів.
@@ -28,11 +28,76 @@
           Івано-Франківській області АТ «Прикарпаттяобленерго» тимчасово
           знеструмлює окремі об’єкти електропостачання.
         </p>
-      </div>
-      <div class="shotdovn">
-        <div class="queue"></div>
+      </header>
+      <section class="shotdovn">
+        <div class="queue">
+          <h2>Інформація про графік погодинних вимкнень:</h2>
+          <div class="container_tabs">
+            <div class="tabs">
+              <ul>
+                <li><span class="tabs_point">Побутові</span></li>
+                <li><span class="tabs_point">Юридичні</span></li>
+                <li><span class="tabs_point">Усі споживачі</span></li>
+              </ul>
+            </div>
+            <div class="household">
+              <p>Ваш особовий рахунок:</p>
+              <input
+                name="personal_account"
+                type="text"
+                required
+                placeholder="о/р"
+              />
+              <button class="what_a_queue" name="submit" type="submit">
+                <span class="text_button">Дізнатись чергу</span>
+              </button>
+            </div>
+            <div class="juristic">
+              <p>Ваш № лічильника:</p>
+              <input
+                class="number"
+                name="counter_number"
+                type="text"
+                required
+                placeholder="номер лічильника"
+              />
+              <button class="what_a_queue" name="submit" type="submit">
+                <span class="text_button">Дізнатись чергу</span>
+              </button>
+            </div>
+            <div class="all_consumers">
+              <p>Ваша адреса:</p>
+              <input
+                class="address_city"
+                name="city"
+                type="text"
+                required
+                placeholder="місто"
+              />
+              <div class="address_street_house">
+                <input
+                  class="address_street"
+                  name="street"
+                  type="text"
+                  required
+                  placeholder="вулиця"
+                />
+                <input
+                  class="address_house"
+                  name="house"
+                  type="text"
+                  required
+                  placeholder="буд."
+                />
+              </div>
+              <button class="what_a_queue" name="submit" type="submit">
+                <span class="text_button">Дізнатись чергу</span>
+              </button>
+            </div>
+          </div>
+        </div>
         <div class="disabled_consumers"></div>
-      </div>
+      </section>
       <div class="inform"></div>
     </div>
   </body>
