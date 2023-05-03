@@ -7,7 +7,7 @@ body {
 
 .wrapper {
   margin: 0 auto;
-  padding: 20px;
+  padding: 20px 80px 20px 80px;
 }
 
 .header {
@@ -284,13 +284,6 @@ h2 {
 }
 
 @media (min-width: 1600px) and (max-width: 1900px) {
-  .shotdovn {
-    margin-left: 80px;
-    margin-right: 80px;
-  }
-
-  .inform {
-    margin-left: 100px;
-    margin-right: 100px;
-  }
+  
 }
+
