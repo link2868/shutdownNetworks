@@ -1,0 +1,11 @@
+:root { 
+    --light-carrot: #ffbd71;
+    --dark-carrot: #ffb14f;
+    --dark-white: #feeed6;
+    --white: #ffffff;
+    --gray: #e5e5e5;
+    --dark-grey: #929190;
+    --light-black: rgba(0, 0, 0, 0.25);
+    --black: #000000;
+    --wheat: #f8dbb9;
+  }

@@ -1,6 +1,8 @@
+/* @import 'colors.css'; */
+
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(to right, #ffbd71, #feeed6, #ffb14f);
+  background: linear-gradient(to right, var(--light-carrot), var(--dark-white), var(--dark-carrot));
   max-width: 1900px;
   margin: 0 auto;
 }
@@ -20,7 +22,7 @@ h1 {
   font-style: normal;
   font-weight: 500;
   font-size: 22px;
-  color: #000000;
+  color: var(--black);
   text-align: center;
   margin: auto;
   padding-left: 40px;
@@ -32,7 +34,7 @@ h2 {
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
-  color: #000000;
+  color: var(--black);
   text-align: center;
   margin: auto;
   padding-left: 40px;
@@ -44,7 +46,7 @@ h2 {
   font-style: normal;
   font-weight: 300;
   font-size: 14px;
-  color: #000000;
+  color: var(--black);
   text-align: center;
   margin: auto;
   margin-top: 40px;
@@ -57,7 +59,7 @@ h2 {
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
-  color: #000000;
+  color: var(--black);
   text-align: left;
   margin: auto;
   margin-top: 50px;
@@ -67,8 +69,8 @@ h2 {
 .queue,
 .disabled_consumers {
   width: 50%;
-  background-color: #e5e5e5;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--gray);
+  box-shadow: 0px 4px 4px var(--light-black);
   margin: 20px;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -102,11 +104,11 @@ h2 {
   font-style: normal;
   font-weight: 300;
   font-size: 12px;
-  color: #000000;
+  color: var(--black);
   padding-top: 12px;
   padding-left: 5px;
   height: 20px;
-  border-bottom: solid 1px #ffbd71;
+  border-bottom: solid 1px var(--light-carrot);
   cursor: pointer;
 }
 
@@ -132,8 +134,8 @@ h2 {
   display: block;
   height: 30px;
   min-width: 90%;
-  border: solid 1px #ffbd71;
-  background-color: #ffb14f;
+  border: solid 1px var(--light-carrot);
+  background-color: var(--dark-carrot);
   border-radius: 30px;
   margin-top: 20px;
   margin-left: auto;
@@ -145,7 +147,7 @@ h2 {
   font-style: normal;
   font-weight: 300;
   font-size: 13px;
-  color: #ffffff;
+  color: var(--white);
 }
 .household {
   width: 100%;
@@ -165,7 +167,7 @@ h2 {
   padding-left: 5px;
   font-style: italic;
   height: 25px;
-  border: solid 1px #929190;
+  border: solid 1px var(--dark-grey);
   border-radius: 5px;
   display: block;
   box-sizing: border-box;
@@ -182,7 +184,7 @@ h2 {
   padding-left: 5px;
   font-style: italic;
   height: 25px;
-  border: solid 1px #929190;
+  border: solid 1px var(--dark-grey);
   border-radius: 5px;
   margin-top: 5px;
   display: block;
@@ -194,7 +196,7 @@ h2 {
   padding-left: 5px;
   font-style: italic;
   height: 25px;
-  border: solid 1px #929190;
+  border: solid 1px var(--dark-grey);
   border-radius: 5px;
   margin-top: 5px;
   margin-left: 5px;
@@ -204,17 +206,17 @@ h2 {
 }
 
 input:focus {
-  outline: 2px solid #ffb14f;
+  outline: 2px solid var(--dark-carrot);
 }
 
 .tabs .active {
-  background-color: #f8dbb9;
+  background-color: var(--wheat);
 }
 
 .inform {
   height: 40px;
-  background-color: #ffb14f;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  background-color: var(--dark-carrot);
+  box-shadow: 0px 4px 4px var(--light-black);
   margin: 40px 20px 20px 20px;
   display: block;
 }
@@ -266,75 +268,6 @@ input:focus {
   .inform {
     margin: 20px 0px 20px 0px;
   }
-}
-
-@media (min-width: 480px) and (max-width: 767px) {
-  h1 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 13px;
-  }
-  .wrapper {
-    padding: 0px;
-  }
-  .shotdovn {
-    display: block;
-  }
-  .queue,
-  .disabled_consumers {
-    width: 100%;
-    margin: 20px 0px 20px 0px;
-  }
-  .inform {
-    margin: 20px 0px 20px 0px;
-  }
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  h1 {
-    font-size: 18px;
-  }
-  .wrapper {
-    padding: 5px;
-  }
-  .container_tabs {
-    display: block;
-  }
-  .tabs {
-    padding-right: 0px;
-  }
-  .tabs ul {
-    display: flex;
-    text-align: center;
-    border-bottom: solid 1px #ffbd71;
-  }
-  .tabs li {
-    flex-basis: auto;
-    flex-grow: 1;
-    border-bottom: none;
-    font-size: 14px;
-  }
-  .queue p {
-    text-align: center;
-  }
-  .household,
-  .juristic,
-  .all_consumers {
-    text-align: center;
-  }
-}
-
-@media (min-width: 992px) and (max-width: 1199px) {
-}
-
-@media (min-width: 1200px) and (max-width: 1399px) {
-}
-
-@media (min-width: 1400px) and (max-width: 1599px) {
-}
-
-@media (min-width: 1600px) and (max-width: 1900px) {
 }
 
 .household {
