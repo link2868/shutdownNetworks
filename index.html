@@ -1,14 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html lang="ua">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Графіки аварійних вимкнень по РЕМ-ах</title>
-    <link rel="icon" type="image/png" href="img/logo.png">
-    <link rel="stylesheet" href="css/style.css">
-</head>
-<body>
-    
-</body>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <header class="header">
+        <h1>
+          Вимкнення в мережах АТ "Прикарпаттяобленерго", пов'язані з введенням
+          графіків аварійних та погодинних вимкнень споживачів.
+        </h1>
+        <p>
+          Для виконання графіків аварійних та погодинних вимкнень по
+          Івано-Франківській області АТ «Прикарпаттяобленерго» тимчасово
+          знеструмлює окремі об’єкти електропостачання.
+        </p>
+      </header>
+      <section class="shotdovn">
+        <div class="queue">
+          <h2>Інформація про графік погодинних вимкнень:</h2>
+          <div class="container_tabs">
+            <div class="tabs">
+              <ul>
+                <li class="active"><span class="tabs_point">Побутові</span></li>
+                <li><span class="tabs_point">Юридичні</span></li>
+                <li><span class="tabs_point">Усі споживачі</span></li>
+              </ul>
+            </div>
+           
+          <div class="container_section">
+            <div class="household">
+              <p>Ваш особовий рахунок:</p>
+              <input
+                name="personal_account"
+                type="text"
+                required
+                placeholder="о/р"
+              />
+              <button class="what_a_queue" name="submit" type="submit">
+                <span class="text_button">Дізнатись чергу</span>
+              </button>
+            </div>
+            <div class="juristic">
+              <p>Ваш № лічильника:</p>
+              <input
+                class="number"
+                name="counter_number"
+                type="text"
+                required
+                placeholder="номер лічильника"
+              />
+              <button class="what_a_queue" name="submit" type="submit">
+                <span class="text_button">Дізнатись чергу</span>
+              </button>
+            </div>
+            <div class="all_consumers">
+              <p>Ваша адреса:</p>
+              <div class="container_address">
+                <div class="container_address_city">
+                  <input
+                    class="address_city"
+                    name="city"
+                    type="text"
+                    required
+                    placeholder="місто"
+                  />
+                </div>
+                <div class="address_street_house">
+                  <div class="container_address_street">
+                    <input
+                      class="address_street"
+                      name="street"
+                      type="text"
+                      required
+                      placeholder="вулиця"
+                    />
+                  </div>
+                  <div class="container_address_house">
+                    <input
+                      class="address_house"
+                      name="house"
+                      type="text"
+                      required
+                      placeholder="буд."
+                    />
+                  </div>
+                </div>
+              </div>
+              <button class="what_a_queue" name="submit" type="submit">
+                <span class="text_button">Дізнатись чергу</span>
+              </button>
+            </div>
+          </div>
+        </div> 
+        </div>
+        <div class="disabled_consumers"></div>
+      </section>
+      <div class="inform"></div>
+    </div>
+  </body>
 </html>
