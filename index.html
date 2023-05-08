@@ -35,11 +35,13 @@
           <div class="container_tabs">
             <div class="tabs">
               <ul>
-                <li><span class="tabs_point">Побутові</span></li>
+                <li class="active"><span class="tabs_point">Побутові</span></li>
                 <li><span class="tabs_point">Юридичні</span></li>
                 <li><span class="tabs_point">Усі споживачі</span></li>
               </ul>
             </div>
+           
+          <div class="container_section">
             <div class="household">
               <p>Ваш особовий рахунок:</p>
               <input
@@ -67,34 +69,43 @@
             </div>
             <div class="all_consumers">
               <p>Ваша адреса:</p>
-              <input
-                class="address_city"
-                name="city"
-                type="text"
-                required
-                placeholder="місто"
-              />
-              <div class="address_street_house">
-                <input
-                  class="address_street"
-                  name="street"
-                  type="text"
-                  required
-                  placeholder="вулиця"
-                />
-                <input
-                  class="address_house"
-                  name="house"
-                  type="text"
-                  required
-                  placeholder="буд."
-                />
+              <div class="container_address">
+                <div class="container_address_city">
+                  <input
+                    class="address_city"
+                    name="city"
+                    type="text"
+                    required
+                    placeholder="місто"
+                  />
+                </div>
+                <div class="address_street_house">
+                  <div class="container_address_street">
+                    <input
+                      class="address_street"
+                      name="street"
+                      type="text"
+                      required
+                      placeholder="вулиця"
+                    />
+                  </div>
+                  <div class="container_address_house">
+                    <input
+                      class="address_house"
+                      name="house"
+                      type="text"
+                      required
+                      placeholder="буд."
+                    />
+                  </div>
+                </div>
               </div>
               <button class="what_a_queue" name="submit" type="submit">
                 <span class="text_button">Дізнатись чергу</span>
               </button>
             </div>
           </div>
+        </div> 
         </div>
         <div class="disabled_consumers"></div>
       </section>
