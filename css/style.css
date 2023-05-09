@@ -221,57 +221,29 @@ input:focus {
   display: block;
 }
 
-@media (max-width: 320px) {
-  body {
-    width: 320px;
-  }
-  h1 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 13px;
-  }
-  .wrapper {
-    padding: 0px;
-  }
-  .shotdovn {
-    display: block;
-  }
-  .queue,
-  .disabled_consumers {
-    width: 100%;
-    margin: 20px 0px 20px 0px;
-  }
-  .inform {
-    margin: 20px 0px 20px 0px;
-  }
-}
-
-@media (min-width: 321px) and (max-width: 479px) {
-  h1 {
-    font-size: 16px;
-  }
-  p {
-    font-size: 13px;
-  }
-  .wrapper {
-    padding: 0px;
-  }
-  .shotdovn {
-    display: block;
-  }
-  .queue,
-  .disabled_consumers {
-    width: 100%;
-    margin: 20px 0px 20px 0px;
-  }
-  .inform {
-    margin: 20px 0px 20px 0px;
-  }
-}
-
-.household {
+.show {
   display: block;
+}
+
+.hide {
+  display: none;
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@keyframes fade {
+  from {
+      opacity: 0.1;
+  } to {
+      opacity: 1;
+  }
+}
+
+/* .household {
+  display: display;
 }
 
 .juristic {
@@ -280,4 +252,4 @@ input:focus {
 
 .all_consumers {
   display: none;
-}
+} */
