@@ -14,7 +14,9 @@
     />
 
     <link rel="icon" type="image/png" href="img/logo.png" />
+    <link rel="stylesheet" href="css/colors.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/screens.css">
   </head>
   <body>
     <div class="wrapper">
@@ -34,15 +36,15 @@
           <h2>Інформація про графік погодинних вимкнень:</h2>
           <div class="container_tabs">
             <div class="tabs">
-              <ul>
-                <li class="active"><span class="tabs_point">Побутові</span></li>
-                <li><span class="tabs_point">Юридичні</span></li>
-                <li><span class="tabs_point">Усі споживачі</span></li>
+              <ul class="tabs_parent">
+                <li class="tab_item"><span class="tabs_point active">Побутові</span></li>
+                <li class="tab_item"><span class="tabs_point">Юридичні</span></li>
+                <li class="tab_item"><span class="tabs_point">Усі споживачі</span></li>
               </ul>
             </div>
            
           <div class="container_section">
-            <div class="household">
+            <div class="household tabcontent">
               <p>Ваш особовий рахунок:</p>
               <input
                 name="personal_account"
@@ -54,7 +56,7 @@
                 <span class="text_button">Дізнатись чергу</span>
               </button>
             </div>
-            <div class="juristic">
+            <div class="juristic tabcontent">
               <p>Ваш № лічильника:</p>
               <input
                 class="number"
@@ -67,7 +69,7 @@
                 <span class="text_button">Дізнатись чергу</span>
               </button>
             </div>
-            <div class="all_consumers">
+            <div class="all_consumers tabcontent">
               <p>Ваша адреса:</p>
               <div class="container_address">
                 <div class="container_address_city">
@@ -111,5 +113,7 @@
       </section>
       <div class="inform"></div>
     </div>
+    <script type="module" src="/js/modules/tabs.js"></script>
+    <script type="module" src="/js/script.js"></script>
   </body>
 </html>
