@@ -69,6 +69,7 @@ h2 {
 .queue,
 .disabled_consumers {
   width: 50%;
+  min-height: 200px;
   background-color: var(--gray);
   box-shadow: 0px 4px 4px var(--light-black);
   margin: 20px;
