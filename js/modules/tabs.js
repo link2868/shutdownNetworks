@@ -1,7 +1,7 @@
-function tabs() {
-  const tabs = document.querySelectorAll(".tabs_point"),
-  tabsContent = document.querySelectorAll(".tabcontent"),
-  tabsParent = document.querySelector(".tabs_parent");
+function tabs(point, content, parent) {
+  const tabs = document.querySelectorAll(point),
+  tabsContent = document.querySelectorAll(content),
+  tabsParent = document.querySelector(parent);
 
 function hideContent() {
   tabsContent.forEach((element) => {
@@ -23,7 +23,7 @@ hideContent();
 showContent();
 
 tabsParent.addEventListener("click", (item) => {
-  if (item.target && item.target.classList.contains("tabs_point"))  {
+  if (item.target && item.target.classList.contains(point.replace(/\./, '')))  {
     tabs.forEach((el, i) => {
       if (item.target == el) {
         hideContent();
