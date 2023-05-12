@@ -16,7 +16,7 @@
     <link rel="icon" type="image/png" href="img/logo.png" />
     <link rel="stylesheet" href="css/colors.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/screens.css">
+    <link rel="stylesheet" href="css/screens.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -37,83 +37,95 @@
           <div class="container_tabs">
             <div class="tabs">
               <ul class="tabs_parent">
-                <li class="tab_item"><span class="tabs_point active">Побутові</span></li>
-                <li class="tab_item"><span class="tabs_point">Юридичні</span></li>
-                <li class="tab_item"><span class="tabs_point">Усі споживачі</span></li>
+                <li class="tab_item">
+                  <span class="tabs_point active">Побутові</span>
+                </li>
+                <li class="tab_item">
+                  <span class="tabs_point">Юридичні</span>
+                </li>
+                <li class="tab_item">
+                  <span class="tabs_point">Усі споживачі</span>
+                </li>
               </ul>
             </div>
-           
-          <div class="container_section">
-            <div class="household tabcontent">
-              <p>Ваш особовий рахунок:</p>
-              <input
-                name="personal_account"
-                type="text"
-                required
-                placeholder="о/р"
-              />
-              <button class="what_a_queue" name="submit" type="submit">
-                <span class="text_button">Дізнатись чергу</span>
-              </button>
-            </div>
-            <div class="juristic tabcontent">
-              <p>Ваш № лічильника:</p>
-              <input
-                class="number"
-                name="counter_number"
-                type="text"
-                required
-                placeholder="номер лічильника"
-              />
-              <button class="what_a_queue" name="submit" type="submit">
-                <span class="text_button">Дізнатись чергу</span>
-              </button>
-            </div>
-            <div class="all_consumers tabcontent">
-              <p>Ваша адреса:</p>
-              <div class="container_address">
-                <div class="container_address_city">
-                  <input
-                    class="address_city"
-                    name="city"
-                    type="text"
-                    required
-                    placeholder="місто"
-                  />
-                </div>
-                <div class="address_street_house">
-                  <div class="container_address_street">
+
+            <div class="container_section">
+              <form id="account" class="household tabcontent">
+                <p>Ваш особовий рахунок:</p>
+                <input
+                  id="input"
+                  name="personal_account"
+                  type="text"
+                  required
+                  placeholder="о/р"
+                />
+                <button class="what_a_queue" name="submit" type="submit">
+                  <span class="text_button">Дізнатись чергу</span>
+                </button>
+              </form>
+              <form id="number" class="juristic tabcontent">
+                <p>Ваш № лічильника:</p>
+                <input
+                  id="input"
+                  class="number"
+                  name="counter_number"
+                  type="text"
+                  required
+                  placeholder="номер лічильника"
+                />
+                <button class="what_a_queue" name="submit" type="submit">
+                  <span class="text_button">Дізнатись чергу</span>
+                </button>
+              </form>
+              <form id="address" class="all_consumers tabcontent">
+                <p>Ваша адреса:</p>
+                <div class="container_address">
+                  <div class="container_address_city">
                     <input
-                      class="address_street"
-                      name="street"
+                      id="input"
+                      class="address_city"
+                      name="city"
                       type="text"
                       required
-                      placeholder="вулиця"
+                      placeholder="місто"
                     />
                   </div>
-                  <div class="container_address_house">
-                    <input
-                      class="address_house"
-                      name="house"
-                      type="text"
-                      required
-                      placeholder="буд."
-                    />
+                  <div class="address_street_house">
+                    <div class="container_address_street">
+                      <input
+                        id="input"
+                        class="address_street"
+                        name="street"
+                        type="text"
+                        required
+                        placeholder="вулиця"
+                      />
+                    </div>
+                    <div class="container_address_house">
+                      <input
+                        id="input"
+                        class="address_house"
+                        name="house"
+                        type="text"
+                        required
+                        placeholder="буд."
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <button class="what_a_queue" name="submit" type="submit">
-                <span class="text_button">Дізнатись чергу</span>
-              </button>
+                <button class="what_a_queue" name="submit" type="submit">
+                  <span class="text_button">Дізнатись чергу</span>
+                </button>
+              </form>
             </div>
           </div>
-        </div> 
         </div>
         <div class="disabled_consumers"></div>
       </section>
       <div class="inform"></div>
     </div>
     <script type="module" src="/js/modules/tabs.js"></script>
+    <script type="module" src="/js/modules/inputs.js"></script>
     <script type="module" src="/js/index.js"></script>
   </body>
 </html>
