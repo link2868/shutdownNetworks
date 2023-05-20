@@ -1,25 +1,60 @@
-const DefineQueue = async () => {
+const DefineQueue = async (data) => {
+  const body = document.querySelector("body"),
+    messageLoading = "img/spinner.svg";
+  let statusMessage = document.createElement("img");
+  statusMessage.src = messageLoading;
+  statusMessage.style.cssText = `
+          display: block;
+          margin: 0 auto ;
+          position: fixed;
+          top: 55%;
+          left: 49%;
+          `;
+  body.append(statusMessage);
+
   let response = await fetch(
-    "https://svitlo.oe.if.ua/GAVTurnOff/RemFilterP?remList=bog_p",
+    "https://svitlo.oe.if.ua/GAVTurnOff/GavGroupByAccountNumber",
     {
-      method: "GET",
+      method: "POST",
       headers: {
         "Content-Type": "application/x-www-form-urlencoded",
       },
-      // body: data,
+      body: data,
     }
   );
+
+  const informPanel = document.querySelector(".inform");
+
   if (response.ok) {
     console.log("Post successfully created!");
-
-    let result = await response.text();
-    document.querySelector(".inform").innerHTML = result;
+    let result = await response.json();
+    informPanel.innerHTML = `${result.current.note}`;
+    informPanel.scrollIntoView();
+    statusMessage.remove();
   } else {
     console.log("response " + response.status + "   " + response.statusText);
 
-    document.querySelector(".inform").innerHTML = "Спробуйте пізніше!";
+    informPanel.innerHTML = "Пошук не дав результатів!  Введіть коректні дані!";
+    informPanel.scrollIntoView();
+    statusMessage.remove();
   }
 };
+
+// const form = document.querySelector("body"),
+//   messageLoading = "img/spinner.svg";
+
+// let statusMessage = document.createElement("img");
+
+// statusMessage.src = messageLoading;
+
+// statusMessage.style.cssText = `
+//         display: block;
+//         margin: 0 auto ;
+//         `;
+
+// form.append(statusMessage);
+
+// statusMessage.remove();
 
 function inputs() {
   function formaPoAccount(element) {
@@ -47,6 +82,7 @@ function inputs() {
   function formaPoNumber(element) {
     document.querySelector(element).addEventListener("submit", (event) => {
       event.preventDefault();
+
       const form = document.querySelector(element),
         value = form.elements.input.value;
 
