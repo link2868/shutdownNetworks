@@ -33,28 +33,13 @@ const DefineQueue = async (data) => {
     statusMessage.remove();
   } else {
     console.log("response " + response.status + "   " + response.statusText);
-
-    informPanel.innerHTML = "Пошук не дав результатів!  Введіть коректні дані!";
+    // let result = await response.json();
+    // informPanel.innerHTML = `${result.current.note}`;
+    informPanel.innerHTML = "Пошук не дав результатів! Введіть коректні дані!";
     informPanel.scrollIntoView();
     statusMessage.remove();
   }
 };
-
-// const form = document.querySelector("body"),
-//   messageLoading = "img/spinner.svg";
-
-// let statusMessage = document.createElement("img");
-
-// statusMessage.src = messageLoading;
-
-// statusMessage.style.cssText = `
-//         display: block;
-//         margin: 0 auto ;
-//         `;
-
-// form.append(statusMessage);
-
-// statusMessage.remove();
 
 function inputs() {
   function formaPoAccount(element) {
