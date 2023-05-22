@@ -71,6 +71,16 @@ h2 {
   margin-bottom: 5px;
 }
 
+.current_data p {
+  max-width: 700px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--dark-grey);
+  text-align: center;
+  margin-top: 5px;
+}
+
 .queue,
 .disabled_consumers {
   width: 50%;
@@ -156,8 +166,11 @@ h2 {
   max-width: 700px;
   font-style: normal;
   font-weight: 300;
-  font-size: 13px;
+  font-size: 12px;
   color: var(--white);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .household {
   width: 100%;
@@ -221,6 +234,37 @@ input:focus {
 
 .tabs .active {
   background-color: var(--wheat);
+}
+
+.container_forms_consumers {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+select {
+  width: 100%;
+  padding-left: 5px;
+  font-style: italic;
+  height: 25px;
+  border: solid 1px var(--dark-grey);
+  border-radius: 5px;
+  display: block;
+  box-sizing: border-box;
+  max-width: 700px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 13px;
+  color: var(--dark-grey);
+}
+
+select:focus {
+  outline: 3px solid var(--dark-carrot);
+}
+
+.locality {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .inform {
