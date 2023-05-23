@@ -71,7 +71,7 @@ h2 {
   margin-bottom: 5px;
 }
 
-.current_data p {
+.current_date_time {
   max-width: 700px;
   font-style: normal;
   font-weight: 300;
@@ -153,13 +153,20 @@ h2 {
 .what_a_queue {
   display: block;
   height: 30px;
-  min-width: 90%;
   border: solid 1px var(--light-carrot);
   background-color: var(--dark-carrot);
   border-radius: 30px;
   margin-top: 20px;
   margin-left: auto;
   margin-right: auto;
+}
+
+.queue .what_a_queue {
+  min-width: 90%;
+}
+
+.disabled_consumers .what_a_queue {
+  min-width: 80%;
 }
 
 .text_button {
