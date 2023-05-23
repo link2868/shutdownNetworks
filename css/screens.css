@@ -22,6 +22,18 @@
   .inform {
     margin: 20px 0px 20px 0px;
   }
+  .container_forms_consumers {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .locality {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 @media (min-width: 321px) and (max-width: 479px) {
@@ -45,6 +57,18 @@
   .inform {
     margin: 20px 0px 20px 0px;
   }
+  .container_forms_consumers {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+
+  .locality {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 @media (min-width: 480px) and (max-width: 767px) {
@@ -67,6 +91,18 @@
   }
   .inform {
     margin: 20px 0px 20px 0px;
+  }
+  .container_forms_consumers {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-left: 80px;
+    padding-right: 80px;
+  }
+
+  .locality {
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 
@@ -102,15 +138,73 @@
   .all_consumers {
     text-align: center;
   }
+  .container_forms_consumers {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .locality {
+    margin-left: 0px;
+    margin-right: 0px;
+  }
 }
 
 @media (min-width: 992px) and (max-width: 1199px) {
+  .container_forms_consumers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .branch_pat {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .locality,
+  .loc_street {
+    width: 45%;
+    flex: none;
+  }
+  .loc_street {
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 1200px) and (max-width: 1399px) {
+  .container_forms_consumers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .branch_pat {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .locality,
+  .loc_street {
+    width: 45%;
+    flex: none;
+  }
+  .loc_street {
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 1400px) and (max-width: 1599px) {
+  .container_forms_consumers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .branch_pat {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  .locality,
+  .loc_street {
+    width: 45%;
+    flex: none;
+  }
+  .loc_street {
+    margin-right: 10px;
+  }
 }
 
 @media (min-width: 1600px) and (max-width: 1989px) {
