@@ -33,7 +33,10 @@
       </header>
       <section class="shotdovn">
         <div class="queue">
-          <h2>Інформація про графік погодинних вимкнень:</h2>
+          <h2>Інформація про графік погодинних вимкнень</h2>
+          <div class="current_data">
+            <p>__ . __ . ____ станом на __ : __</p>
+          </div>
           <div class="container_tabs">
             <div class="tabs">
               <ul class="tabs_parent">
@@ -120,7 +123,38 @@
             </div>
           </div>
         </div>
-        <div class="disabled_consumers"></div>
+        <div class="disabled_consumers">
+          <h2>Активні вимкнення споживачів</h2>
+          <div class="current_data">
+            <p>__ . __ . ____ станом на __ : __</p>
+          </div>
+          <div class="container_forms_consumers">
+            <div class="branch_pat">
+              <p>Філія ПАТ:</p>
+              <select required>
+                <option>Виберіть РЕМ</option>
+              </select>
+            </div>
+            <div class="locality">
+              <p>Населений пункт:</p>
+              <select required>
+                <option>Виберіть нас.пункт</option>
+              </select>
+              <button class="what_a_queue" name="submit" type="submit">
+                <span class="text_button">Сформувати по нас. пункту</span>
+              </button>
+            </div>
+            <div class="loc_street">
+              <p>Вулиця:</p>
+              <select required>
+                <option>Виберіть вулицю</option>
+              </select>
+              <button class="what_a_queue" name="submit" type="submit">
+                <span class="text_button">Сформувати по вулиці</span>
+              </button>
+            </div>
+          </div>
+        </div>
       </section>
       <div class="inform"></div>
     </div>
