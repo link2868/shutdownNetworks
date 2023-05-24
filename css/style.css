@@ -270,6 +270,12 @@ select {
   color: var(--dark-grey);
 }
 
+option {
+  border: solid 2px var(--dark-carrot);
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
 select:focus {
   outline: 3px solid var(--dark-carrot);
 }

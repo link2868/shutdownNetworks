@@ -127,27 +127,55 @@
           <div class="container_forms_consumers">
             <div class="branch_pat">
               <p>Філія ПАТ:</p>
-              <select required>
-                <option>Виберіть РЕМ</option>
-              </select>
+              <form>
+                <select name="branch_pat" required>
+                  <option value="select_null"></option>
+                  <option
+                    selected
+                    value="select_rem"
+                    label="Виберіть РЕМ"
+                  ></option>
+                  <option value="bog_p">Богородчанський РЕМ</option>
+                  <option value="ver_p">Верховинський РЕМ</option>
+                  <option value="gal_p">Галицький РЕМ</option>
+                  <option value="gor_p">Городенківський РЕМ</option>
+                  <option value="dol_p">Долинський РЕМ</option>
+                  <option value="iv-fr_p">Івано-Франківський РЕМ</option>
+                  <option value="kal_p">Калуський РЕМ</option>
+                  <option value="kolm_p">Коломия місто РЕМ</option>
+                  <option value="kolr_p">Коломийський РЕМ</option>
+                  <option value="kos_p">Косівський РЕМ</option>
+                  <option value="lys_p">Лисецький РЕМ</option>
+                  <option value="nad_p">Надвірнянський РЕМ</option>
+                  <option value="rog_p">Рогатинський РЕМ</option>
+                  <option value="roz_p">Рожнятівський РЕМ</option>
+                  <option value="snj_p">Снятинський РЕМ</option>
+                  <option value="tlu_p">Тлумацький РЕМ</option>
+                  <option value="yar_p">Яремчанський РЕМ</option>
+                </select>
+              </form>
             </div>
             <div class="locality">
               <p>Населений пункт:</p>
-              <select required>
-                <option>Виберіть нас.пункт</option>
-              </select>
-              <button class="what_a_queue" name="submit" type="submit">
-                <span class="text_button">Сформувати по нас. пункту</span>
-              </button>
+              <form>
+                <select name="locality" required>
+                  <option label="Виберіть нас.пункт"></option>
+                </select>
+                <button class="what_a_queue" name="submit" type="submit">
+                  <span class="text_button">Сформувати по нас. пункту</span>
+                </button>
+              </form>
             </div>
             <div class="loc_street">
               <p>Вулиця:</p>
-              <select required>
-                <option>Виберіть вулицю</option>
-              </select>
-              <button class="what_a_queue" name="submit" type="submit">
-                <span class="text_button">Сформувати по вулиці</span>
-              </button>
+              <form>
+                <select name="loc_street" required>
+                  <option label="Виберіть вулицю"></option>
+                </select>
+                <button class="what_a_queue" name="submit" type="submit">
+                  <span class="text_button">Сформувати по вулиці</span>
+                </button>
+              </form>
             </div>
           </div>
         </div>
@@ -156,6 +184,8 @@
     </div>
     <script type="module" src="/js/modules/tabs.js"></script>
     <script type="module" src="/js/modules/inputs.js"></script>
+    <script type="module" src="/js/modules/selects.js"></script>
+    <script type="module" src="/js/modules/preloader.js"></script>
     <script type="module" src="/js/modules/date.js"></script>
     <script type="module" src="/js/index.js"></script>
   </body>
