@@ -78,13 +78,16 @@ h2 {
   font-size: 13px;
   color: var(--dark-grey);
   text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: auto;
   margin-top: 5px;
 }
 
 .queue,
 .disabled_consumers {
   width: 50%;
-  min-height: 200px;
+  min-height: 300px;
   background-color: var(--gray);
   box-shadow: 0px 4px 4px var(--light-black);
   margin: 20px;
@@ -196,7 +199,7 @@ h2 {
 .all_consumers .address_city {
   padding-left: 5px;
   font-style: italic;
-  height: 25px;
+  height: 30px;
   border: solid 1px var(--dark-grey);
   border-radius: 5px;
   display: block;
@@ -213,7 +216,7 @@ h2 {
 .all_consumers .address_street {
   padding-left: 5px;
   font-style: italic;
-  height: 25px;
+  height: 30px;
   border: solid 1px var(--dark-grey);
   border-radius: 5px;
   margin-top: 5px;
@@ -225,7 +228,7 @@ h2 {
 .all_consumers .address_house {
   padding-left: 5px;
   font-style: italic;
-  height: 25px;
+  height: 30px;
   border: solid 1px var(--dark-grey);
   border-radius: 5px;
   margin-top: 5px;
@@ -258,7 +261,7 @@ input:focus {
 select {
   width: 100%;
   padding-left: 5px;
-  height: 25px;
+  height: 30px;
   border: solid 1px var(--dark-grey);
   border-radius: 5px;
   display: block;
@@ -268,6 +271,12 @@ select {
   font-weight: 300;
   font-size: 13px;
   color: var(--dark-grey);
+}
+
+option {
+  border: solid 2px var(--dark-carrot);
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 select:focus {

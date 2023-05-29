@@ -1,17 +1,7 @@
-const DefineQueue = async (data) => {
-  const body = document.querySelector("body"),
-    messageLoading = "img/spinner.svg";
-  let statusMessage = document.createElement("img");
-  statusMessage.src = messageLoading;
-  statusMessage.style.cssText = `
-          display: block;
-          margin: 0 auto ;
-          position: fixed;
-          top: 55%;
-          left: 49%;
-          `;
-  body.append(statusMessage);
+import preloader from "./preloader.js";
 
+const DefineQueue = async (data) => {
+  const statusMessage = preloader();
   let response = await fetch(
     "https://svitlo.oe.if.ua/GAVTurnOff/GavGroupByAccountNumber",
     {
@@ -30,6 +20,7 @@ const DefineQueue = async (data) => {
     let result = await response.json();
     informPanel.innerHTML = `${result.current.note}`;
     informPanel.scrollIntoView();
+
     statusMessage.remove();
   } else {
     console.log("response " + response.status + "   " + response.statusText);
