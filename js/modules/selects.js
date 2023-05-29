@@ -1,51 +1,37 @@
 import preloader from "./preloader.js";
 
+const parseXmlText = (xmlText) => {
+  const parser = new DOMParser();
+  const xmlDoc = parser.parseFromString(xmlText, "application/xml");
+
+  return xmlDoc.documentElement.textContent;
+};
+
 const disconnectionByBranch = (url) => {
   const informPanel = document.querySelector(".inform"),
     statusMessage = preloader();
 
   fetch(url)
     .then((response) => {
-      let result = response.text();
-      return result;
+      if (!response.ok) throw response;
+      return response.text();
     })
-    .then((result) => {
-      const parser = new DOMParser(),
-        xmlDoc = parser.parseFromString(result, "text/xml");
-
-      informPanel.innerHTML = `${xmlDoc.documentElement.textContent}`;
+    .then((xmlText) => {
+      informPanel.innerHTML = parseXmlText(xmlText);
       informPanel.scrollIntoView();
     })
     .catch((error) => {
-      // informPanel.innerHTML = "ERROR";
+      if (error.status) informPanel.innerHTML = `ERROR: ${error.status}`;
+      else informPanel.innerHTML = `ERROR: Немає відповіді від сервера`;
       informPanel.scrollIntoView();
-      console.error(error.response);
     })
     .finally(() => {
       statusMessage.remove();
-      // setTimeout(() => {
-      //   informPanel.innerHTML = "";
-      // }, 5000);
+      setTimeout(() => {
+        informPanel.innerHTML = "";
+      }, 5000);
     });
 };
-
-// const disconnectionByBranch = async (url) => {
-//   const statusMessage = preloader(),
-//     response = await fetch(url),
-//     informPanel = document.querySelector(".inform");
-
-//   if (!response.ok) {
-//     informPanel.innerHTML = `Помилка за адресою  ${url}, статус помилки  ${response.text()}`;
-//     informPanel.scrollIntoView();
-//     statusMessage.remove();
-//   }
-//   console.log("Post successfully created!");
-//   let result = await response.text();
-//   informPanel.innerHTML = `${result}`;
-//   informPanel.scrollIntoView();
-
-//   statusMessage.remove();
-// };
 
 function selects() {
   const selectBranch = document.querySelector('[name="branch_pat"]');
@@ -54,9 +40,7 @@ function selects() {
     const getValue = selectBranch.value;
 
     if (getValue !== "select_rem" && getValue !== "select_null") {
-      const url = `https://svitlo.oe.if.ua/GAVTurnOff/RemFilter?remList=${getValue}`;
-      console.log(getValue);
-      console.log(url);
+      const url = `https://svitlo.oe.if.ua/GAVTurnOff/RemFilterP?remList=${getValue}`;
       disconnectionByBranch(url);
     }
   });
