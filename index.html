@@ -60,7 +60,12 @@
                   required
                   placeholder="о/р"
                 />
-                <button class="what_a_queue" name="submit" type="submit">
+                <button
+                  class="what_a_queue"
+                  data-modal
+                  name="submit"
+                  type="submit"
+                >
                   <span class="text_button">Дізнатись чергу</span>
                 </button>
               </form>
@@ -74,7 +79,12 @@
                   required
                   placeholder="номер лічильника"
                 />
-                <button class="what_a_queue" name="submit" type="submit">
+                <button
+                  class="what_a_queue"
+                  data-modal
+                  name="submit"
+                  type="submit"
+                >
                   <span class="text_button">Дізнатись чергу</span>
                 </button>
               </form>
@@ -114,7 +124,12 @@
                     </div>
                   </div>
                 </div>
-                <button class="what_a_queue" name="submit" type="submit">
+                <button
+                  class="what_a_queue"
+                  data-modal
+                  name="submit"
+                  type="submit"
+                >
                   <span class="text_button">Дізнатись чергу</span>
                 </button>
               </form>
@@ -131,6 +146,7 @@
                 <select name="branch_pat" required>
                   <option value="select_null"></option>
                   <option
+                    class="option"
                     selected
                     value="select_rem"
                     label="Виберіть РЕМ"
@@ -182,11 +198,16 @@
       </section>
       <div class="inform"></div>
     </div>
-    <script type="module" src="/js/modules/tabs.js"></script>
-    <script type="module" src="/js/modules/inputs.js"></script>
-    <script type="module" src="/js/modules/selects.js"></script>
+    <div class="modal_active">
+      <div class="modal_close" data-close><img src="/img/close.png" /></div>
+      <div class="inform_modal"></div>
+    </div>
+    <script type="module" src="/js/modules/modal.js"></script>
     <script type="module" src="/js/modules/preloader.js"></script>
+    <script type="module" src="/js/modules/selects.js"></script>
+    <script type="module" src="/js/modules/inputs.js"></script>
     <script type="module" src="/js/modules/date.js"></script>
+    <script type="module" src="/js/modules/tabs.js"></script>
     <script type="module" src="/js/index.js"></script>
   </body>
 </html>

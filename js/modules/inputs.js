@@ -13,19 +13,30 @@ const DefineQueue = async (data) => {
     }
   );
 
-  const informPanel = document.querySelector(".inform");
+  const informPanel = document.querySelector(".inform"),
+    wrapper = document.querySelector(".wrapper"),
+    modalActive = document.querySelector(".modal_active"),
+    informModal = document.querySelector(".inform_modal");
 
   if (response.ok) {
     console.log("Post successfully created!");
     let result = await response.json();
-    informPanel.innerHTML = `${result.current.note}`;
-    informPanel.scrollIntoView();
 
+    modalActive.classList.add("show");
+    modalActive.classList.remove("hide");
+    wrapper.style.opacity = 0.15;
+    document.body.style.overflow = "hidden";
+
+    informPanel.innerHTML = "";
+    informModal.innerHTML = `${result.current.note}`;
+    // informPanel.innerHTML = `${result.current.note}`;
+    // informPanel.scrollIntoView();
     statusMessage.remove();
   } else {
     console.log("response " + response.status + "   " + response.statusText);
     // let result = await response.json();
     // informPanel.innerHTML = `${result.current.note}`;
+
     informPanel.innerHTML = "Пошук не дав результатів! Введіть коректні дані!";
     informPanel.scrollIntoView();
     statusMessage.remove();
