@@ -8,13 +8,13 @@ function modal() {
   //   btn.addEventListener("click", modalOupen);
   // });
 
-  function modalOupen() {
-    modalActive.classList.add("show");
-    modalActive.classList.remove("hide");
-    overlay.classList.add("show");
-    overlay.classList.remove("hide");
-    document.body.style.overflow = "hidden";
-  }
+  // function modalOupen() {
+  //   modalActive.classList.add("show");
+  //   modalActive.classList.remove("hide");
+  //   overlay.classList.add("show");
+  //   overlay.classList.remove("hide");
+  //   document.body.style.overflow = "hidden";
+  // }
 
   function modalClose() {
     modalActive.classList.add("hide");
@@ -25,6 +25,7 @@ function modal() {
   }
 
   modalOff.addEventListener("click", modalClose);
+  overlay.addEventListener("click", modalClose);
   document.addEventListener("keydown", (e) => {
     if (e.code === "Escape" && modalActive.classList.contains("show")) {
       modalClose();

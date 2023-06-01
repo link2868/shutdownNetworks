@@ -75,7 +75,7 @@ h2 {
 .current_date_time {
   max-width: 700px;
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
   color: var(--dark-grey);
   text-align: center;
@@ -314,20 +314,10 @@ select:focus {
   color: var(--white);
 }
 
-/* .modal_background {
-  display: none;
-  background: rgba(0, 0, 0, 0.8);
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  cursor: pointer;
-  z-index: 1;
-} */
-
 .modal_active {
-  display: block;
+  display: none;
   position: fixed;
-  width: 70%;
+  width: 80%;
   height: 60%;
   top: 45%;
   left: 50%;
@@ -346,7 +336,7 @@ select:focus {
   justify-content: space-around;
   border: solid 3px var(--dark-grey);
   height: 80%;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
 }
 
 .shutdown_today,
@@ -361,10 +351,18 @@ select:focus {
   display: flex;
   text-align: center;
   justify-content: center;
-  min-width: 85%;
+  min-width: 90%;
   min-height: 23%;
   padding: 20px 5px 20px 5px;
   margin: 0 auto;
+}
+
+.schedule {
+  max-width: 700px;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  color: var(--black);
 }
 
 .modal_close {
@@ -392,6 +390,7 @@ select:focus {
   width: 100%;
   height: 100%;
   z-index: 1;
+  cursor: pointer;
 }
 
 .inform_modal {
