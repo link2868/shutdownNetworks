@@ -14,17 +14,18 @@ const DefineQueue = async (data) => {
   );
 
   const informPanel = document.querySelector(".inform"),
-    wrapper = document.querySelector(".wrapper"),
+    overlay = document.querySelector(".overlay"),
     modalActive = document.querySelector(".modal_active"),
     informModal = document.querySelector(".inform_modal");
 
   if (response.ok) {
     console.log("Post successfully created!");
     let result = await response.json();
-
+    overlay.classList.add("show");
+    overlay.classList.remove("hide");
     modalActive.classList.add("show");
     modalActive.classList.remove("hide");
-    wrapper.style.opacity = 0.15;
+
     document.body.style.overflow = "hidden";
 
     informPanel.innerHTML = "";
