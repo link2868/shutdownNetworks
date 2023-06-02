@@ -31,5 +31,10 @@ function modal() {
       modalClose();
     }
   });
+
+  const tomorrowPublished = document.querySelector(
+    ".shutdown_tomorrow.published"
+  );
+  tomorrowPublished.innerHTML = "Опубліковано ____ Оновлено ";
 }
 export default modal;

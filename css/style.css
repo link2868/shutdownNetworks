@@ -334,8 +334,7 @@ select:focus {
 .modal_shutdown {
   display: flex;
   justify-content: space-around;
-  border: solid 3px var(--dark-grey);
-  height: 80%;
+  height: 100%;
   margin-bottom: 20px;
 }
 
@@ -343,7 +342,6 @@ select:focus {
 .shutdown_tomorrow {
   justify-content: center;
   width: 50%;
-  border: solid 1px var(--dark-grey);
 }
 
 .shutdown_today div,
@@ -363,6 +361,17 @@ select:focus {
   font-weight: 500;
   font-size: 16px;
   color: var(--black);
+}
+
+.published {
+  font-size: 14px;
+  align-items: end;
+}
+
+.information {
+  font-size: 16px;
+  font-weight: 300;
+  align-items: center;
 }
 
 .modal_close {

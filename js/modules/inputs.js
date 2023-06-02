@@ -16,7 +16,8 @@ const DefineQueue = async (data) => {
   const informPanel = document.querySelector(".inform"),
     overlay = document.querySelector(".overlay"),
     modalActive = document.querySelector(".modal_active"),
-    informModal = document.querySelector(".inform_modal");
+    informModal = document.querySelector(".inform_modal"),
+    informToday = document.querySelector(".shutdown_today.information");
 
   if (response.ok) {
     console.log("Post successfully created!");
@@ -30,6 +31,7 @@ const DefineQueue = async (data) => {
 
     informPanel.innerHTML = "";
     informModal.innerHTML = `${result.current.note}`;
+
     // informPanel.innerHTML = `${result.current.note}`;
     // informPanel.scrollIntoView();
     statusMessage.remove();
