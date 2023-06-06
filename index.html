@@ -13,6 +13,11 @@
       rel="stylesheet"
     />
 
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
+
     <link rel="icon" type="image/png" href="img/logo.png" />
     <link rel="stylesheet" href="css/colors.css" />
     <link rel="stylesheet" href="css/style.css" />
@@ -142,15 +147,16 @@
           <div class="container_forms_consumers">
             <div class="branch_pat">
               <p>Філія ПАТ:</p>
-              <form>
-                <select name="branch_pat" required>
-                  <option value="select_null"></option>
-                  <option
-                    class="option"
-                    selected
-                    value="select_rem"
-                    label="Виберіть РЕМ"
-                  ></option>
+              <div class="select-wrap">
+                <select
+                  id="branch_pat"
+                  name="branch_pat"
+                  placeholder="Виберіть РЕМ"
+                  required
+                >
+                  <option value="select_null" label="Виберіть РЕМ">
+                    Виберіть РЕМ
+                  </option>
                   <option value="bog_p">Богородчанський РЕМ</option>
                   <option value="ver_p">Верховинський РЕМ</option>
                   <option value="gal_p">Галицький РЕМ</option>
@@ -169,13 +175,13 @@
                   <option value="tlu_p">Тлумацький РЕМ</option>
                   <option value="yar_p">Яремчанський РЕМ</option>
                 </select>
-              </form>
+              </div>
             </div>
             <div class="locality">
               <p>Населений пункт:</p>
               <form>
-                <select name="locality" required>
-                  <option label="Виберіть нас.пункт"></option>
+                <select id="locality" name="locality" required>
+                  <option label="Виберіть нас.пункт">Виберіть нас.пункт</option>
                 </select>
                 <button class="what_a_queue" name="submit" type="submit">
                   <span class="text_button">Сформувати по нас. пункту</span>
@@ -185,8 +191,8 @@
             <div class="loc_street">
               <p>Вулиця:</p>
               <form>
-                <select name="loc_street" required>
-                  <option label="Виберіть вулицю"></option>
+                <select id="loc_street" name="loc_street" required>
+                  <option label="Виберіть вулицю">Виберіть вулицю</option>
                 </select>
                 <button class="what_a_queue" name="submit" type="submit">
                   <span class="text_button">Сформувати по вулиці</span>
@@ -215,6 +221,8 @@
       </div>
     </div>
     <div class="overlay"></div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
     <script type="module" src="/js/modules/modal.js"></script>
     <script type="module" src="/js/modules/preloader.js"></script>
     <script type="module" src="/js/modules/selects.js"></script>

@@ -34,15 +34,36 @@ const disconnectionByBranch = (url) => {
 };
 
 function selects() {
-  const selectBranch = document.querySelector('[name="branch_pat"]');
+  $(document).ready(function () {
+    $("#branch_pat").select2({
+      width: "100%",
+      // minimumResultsForSearch: Infinity,
+      // maximumSelectionLength: 1,
+    });
+    $("#branch_pat").on("change", function () {
+      const selectBranch = $("#branch_pat option:selected").val();
+      console.log(selectBranch);
+      if (selectBranch !== "select_null") {
+        const url = `https://svitlo.oe.if.ua/GAVTurnOff/RemFilterP?remList=${selectBranch}`;
+        disconnectionByBranch(url);
+      }
+    });
+  });
 
-  selectBranch.addEventListener("change", function () {
-    const getValue = selectBranch.value;
-
-    if (getValue !== "select_rem" && getValue !== "select_null") {
-      const url = `https://svitlo.oe.if.ua/GAVTurnOff/RemFilterP?remList=${getValue}`;
-      disconnectionByBranch(url);
-    }
+  $(document).ready(function () {
+    $("#locality").select2({
+      width: "100%",
+      // minimumResultsForSearch: Infinity,
+      // maximumSelectionLength: 1,
+    });
+    $("#locality").attr("disabled", "disabled");
+  });
+  $(document).ready(function () {
+    $("#loc_street").select2({
+      width: "100%",
+      // minimumResultsForSearch: Infinity,
+      // maximumSelectionLength: 1,
+    });
   });
 }
 
