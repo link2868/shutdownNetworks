@@ -30,6 +30,7 @@ const DefineQueue = async (data) => {
     document.body.style.overflow = "hidden";
 
     informPanel.innerHTML = "";
+
     // informPanel.classList.remove("hide");
     informModal.innerHTML = `${result.current.note}`;
 
@@ -42,8 +43,11 @@ const DefineQueue = async (data) => {
     // informPanel.innerHTML = `${result.current.note}`;
     // informPanel.classList.add("show");
     // informPanel.classList.remove("hide");
+
     informPanel.innerHTML = "Пошук не дав результатів! Введіть коректні дані!";
+
     informPanel.scrollIntoView();
+
     statusMessage.remove();
   }
 };
