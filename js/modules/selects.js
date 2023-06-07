@@ -50,21 +50,6 @@ function selects() {
     });
   });
 
-  const selectLocality = document.querySelector("#locality"),
-    buttonLocality = document.querySelector("#button_locality"),
-    selectLocStreet = document.querySelector("#loc_street"),
-    buttonLocStreet = document.querySelector("#button_loc_street");
-  // selectLocality.disabled = false;
-  if (selectLocality.disabled == true) {
-    buttonLocality.disabled = true;
-    selectLocStreet.disabled = true;
-    buttonLocStreet.disabled = true;
-  } else {
-    buttonLocality.disabled = false;
-    selectLocStreet.disabled = false;
-    buttonLocStreet.disabled = false;
-  }
-
   $(document).ready(function () {
     $("#locality").select2({
       width: "100%",
@@ -75,6 +60,26 @@ function selects() {
       width: "100%",
     });
   });
+
+  function activateSelect() {
+    const selectLocality = document.querySelector("#locality"),
+      buttonLocality = document.querySelector("#button_locality"),
+      selectLocStreet = document.querySelector("#loc_street"),
+      buttonLocStreet = document.querySelector("#button_loc_street");
+
+    // selectLocality.disabled = false;
+
+    if (selectLocality.disabled == true) {
+      buttonLocality.disabled = true;
+      selectLocStreet.disabled = true;
+      buttonLocStreet.disabled = true;
+    } else {
+      buttonLocality.disabled = false;
+      selectLocStreet.disabled = false;
+      buttonLocStreet.disabled = false;
+    }
+  }
+  activateSelect();
 }
 
 export default selects;
