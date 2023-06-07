@@ -274,6 +274,11 @@ input:focus {
   border-radius: 5px;
 }
 
+button:disabled {
+  background: var(--light-gray);
+  border: none;
+}
+
 .inform {
   display: block;
   padding-left: 10px;

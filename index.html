@@ -147,7 +147,7 @@
           <div class="container_forms_consumers">
             <div class="branch_pat">
               <p>Філія ПАТ:</p>
-              <div class="select-wrap">
+              <div class="select-wrap_branch_pat">
                 <select
                   id="branch_pat"
                   name="branch_pat"
@@ -180,10 +180,16 @@
             <div class="locality">
               <p>Населений пункт:</p>
               <form>
-                <select id="locality" name="locality" required>
+                <select id="locality" name="locality" required disabled="">
                   <option label="Виберіть нас.пункт">Виберіть нас.пункт</option>
                 </select>
-                <button class="what_a_queue" name="submit" type="submit">
+                <button
+                  id="button_locality"
+                  class="what_a_queue"
+                  name="submit"
+                  type="submit"
+                  disabled=""
+                >
                   <span class="text_button">Сформувати по нас. пункту</span>
                 </button>
               </form>
@@ -191,10 +197,16 @@
             <div class="loc_street">
               <p>Вулиця:</p>
               <form>
-                <select id="loc_street" name="loc_street" required>
+                <select id="loc_street" name="loc_street" required disabled="">
                   <option label="Виберіть вулицю">Виберіть вулицю</option>
                 </select>
-                <button class="what_a_queue" name="submit" type="submit">
+                <button
+                  id="button_loc_street"
+                  class="what_a_queue"
+                  name="submit"
+                  type="submit"
+                  disabled=""
+                >
                   <span class="text_button">Сформувати по вулиці</span>
                 </button>
               </form>
