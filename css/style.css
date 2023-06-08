@@ -105,6 +105,8 @@ h2 {
   display: flex;
 }
 
+/* Таби */
+
 .tabs {
   min-width: 100px;
   padding-right: 50px;
@@ -136,14 +138,43 @@ h2 {
   cursor: pointer;
 }
 
+.tabs .active {
+  background-color: var(--wheat);
+}
+
+.fade {
+  animation-name: fade;
+  animation-duration: 1.2s;
+}
+
+@keyframes fade {
+  from {
+    opacity: 0.1;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Контент вікна "Інформація про графік погодинних вимкнень" */
 .container_section {
   display: flex;
 }
 
-.household,
-.juristic {
+.household {
+  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.juristic {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .all_consumers {
@@ -154,47 +185,7 @@ h2 {
   margin-right: auto;
 }
 
-.what_a_queue {
-  display: block;
-  height: 30px;
-  border: solid 1px var(--light-carrot);
-  background-color: var(--dark-carrot);
-  border-radius: 30px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-  cursor: pointer;
-}
-
-.queue .what_a_queue {
-  min-width: 90%;
-}
-
-.disabled_consumers .what_a_queue {
-  min-width: 80%;
-}
-
-.text_button {
-  max-width: 700px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 12px;
-  color: var(--white);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.household {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.juristic {
-  width: 100%;
-  padding-left: auto;
-  padding-right: auto;
-}
+/* Inputs */
 
 .household input,
 .juristic input,
@@ -244,9 +235,7 @@ input:focus {
   outline: 2px solid var(--dark-carrot);
 }
 
-.tabs .active {
-  background-color: var(--wheat);
-}
+/* Контент вікна "Активні вимкнення споживачів" */
 
 .container_forms_consumers {
   display: flex;
@@ -261,6 +250,8 @@ input:focus {
   width: 30%;
 }
 
+/* select2 */
+
 .select2-container {
   font-style: normal;
   font-weight: 300;
@@ -274,10 +265,7 @@ input:focus {
   border-radius: 5px;
 }
 
-button:disabled {
-  background: var(--light-gray);
-  border: none;
-}
+/* Інформаційна панель */
 
 .inform {
   display: block;
@@ -298,101 +286,7 @@ button:disabled {
   color: var(--white);
 }
 
-.modal_active {
-  display: none;
-  position: fixed;
-  width: 80%;
-  height: 60%;
-  top: 45%;
-  left: 50%;
-  border-radius: 10px;
-  background-color: var(--dark-white);
-  box-shadow: 0px 4px 4px var(--light-black);
-  cursor: default;
-  padding: 40px 20px;
-  transform: translate(-50%, -42%);
-  text-align: center;
-  z-index: 2;
-}
-
-.modal_shutdown {
-  display: flex;
-  justify-content: space-around;
-  height: 100%;
-  margin-bottom: 20px;
-}
-
-.shutdown_today,
-.shutdown_tomorrow {
-  justify-content: center;
-  width: 50%;
-}
-
-.shutdown_today div,
-.shutdown_tomorrow div {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  min-width: 90%;
-  min-height: 23%;
-  padding: 20px 5px 20px 5px;
-  margin: 0 auto;
-}
-
-.schedule {
-  max-width: 700px;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  color: var(--black);
-}
-
-.published {
-  font-size: 14px;
-  align-items: end;
-}
-
-.information {
-  font-size: 16px;
-  font-weight: 300;
-  align-items: center;
-}
-
-.modal_close {
-  position: absolute;
-  right: 10px;
-  top: 10px;
-  width: 30px;
-  height: 30px;
-  cursor: pointer;
-}
-
-.modal_close img {
-  margin: 3px;
-  width: 24px;
-  height: 24px;
-}
-
-.overlay {
-  display: none;
-  position: fixed;
-  opacity: 0.2;
-  background-color: var(--light-carrot);
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  cursor: pointer;
-}
-
-.inform_modal {
-  padding-left: 10px;
-  padding-right: 10px;
-  margin: 10px auto;
-  min-height: 60px;
-  width: 90%;
-}
+/* Стилі для підключення */
 
 .show {
   display: block;
@@ -401,29 +295,3 @@ button:disabled {
 .hide {
   display: none;
 }
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.2s;
-}
-
-@keyframes fade {
-  from {
-    opacity: 0.1;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* .household {
-  display: display;
-}
-
-.juristic {
-  display: none;
-}
-
-.all_consumers {
-  display: none;
-} */
