@@ -46,3 +46,20 @@
     opacity: 1;
   }
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+  .tabs {
+    padding-right: 0px;
+  }
+  .tabs ul {
+    display: flex;
+    text-align: center;
+    border-bottom: solid 1px var(--dark-carrot);
+  }
+  .tabs li {
+    flex-basis: auto;
+    flex-grow: 1;
+    border-bottom: none;
+    font-size: 14px;
+  }
+}
