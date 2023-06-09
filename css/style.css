@@ -242,3 +242,166 @@ input:focus {
 .hide {
   display: none;
 }
+
+@media (max-width: 320px) {
+  body {
+    width: 320px;
+  }
+  h1 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .wrapper {
+    padding: 0px;
+  }
+  .shotdovn {
+    display: block;
+  }
+  .queue,
+  .disabled_consumers {
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+  }
+  .inform {
+    margin: 20px 0px 20px 0px;
+  }
+  .container_forms_consumers {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .branch_pat,
+  .locality,
+  .loc_street {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 321px) and (max-width: 479px) {
+  h1 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .wrapper {
+    padding: 0px;
+  }
+  .shotdovn {
+    display: block;
+  }
+  .queue,
+  .disabled_consumers {
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+  }
+  .inform {
+    margin: 20px 0px 20px 0px;
+  }
+  .container_forms_consumers {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .branch_pat,
+  .locality,
+  .loc_street {
+    width: 90%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 480px) and (max-width: 767px) {
+  h1 {
+    font-size: 16px;
+  }
+  p {
+    font-size: 13px;
+  }
+  .wrapper {
+    padding: 0px;
+  }
+  .shotdovn {
+    display: block;
+  }
+  .queue,
+  .disabled_consumers {
+    width: 100%;
+    margin: 20px 0px 20px 0px;
+  }
+  .inform {
+    margin: 20px 0px 20px 0px;
+  }
+  .container_forms_consumers {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  .branch_pat,
+  .locality,
+  .loc_street {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  h1 {
+    font-size: 18px;
+  }
+  .wrapper {
+    padding: 5px;
+  }
+  .container_tabs {
+    display: block;
+  }
+
+  .queue p {
+    text-align: center;
+  }
+  .household,
+  .juristic,
+  .all_consumers {
+    text-align: center;
+  }
+  .container_forms_consumers {
+    display: block;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+  .branch_pat,
+  .locality,
+  .loc_street {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1599px) {
+  .container_forms_consumers {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .branch_pat {
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .branch_pat {
+    width: 60%;
+  }
+  .locality,
+  .loc_street {
+    width: 45%;
+    flex: none;
+  }
+  .loc_street {
+    margin-left: 20px;
+  }
+}
