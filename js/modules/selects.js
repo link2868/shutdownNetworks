@@ -1,4 +1,4 @@
-import preloader from "./preloader.js";
+// import preloader from "./preloader.js";
 
 const parseXmlText = (xmlText) => {
   const parser = new DOMParser();
@@ -34,16 +34,52 @@ const disconnectionByBranch = (url) => {
 };
 
 function selects() {
-  const selectBranch = document.querySelector('[name="branch_pat"]');
-
-  selectBranch.addEventListener("change", function () {
-    const getValue = selectBranch.value;
-
-    if (getValue !== "select_rem" && getValue !== "select_null") {
-      const url = `https://svitlo.oe.if.ua/GAVTurnOff/RemFilterP?remList=${getValue}`;
-      disconnectionByBranch(url);
-    }
+  $(document).ready(function () {
+    $("#branch_pat").select2({
+      width: "100%",
+      // minimumResultsForSearch: Infinity,
+      // maximumSelectionLength: 1,
+    });
+    $("#branch_pat").on("change", function () {
+      const selectBranch = $("#branch_pat option:selected").val();
+      console.log(selectBranch);
+      if (selectBranch !== "select_null") {
+        const url = `https://svitlo.oe.if.ua/GAVTurnOff/RemFilterP?remList=${selectBranch}`;
+        disconnectionByBranch(url);
+      }
+    });
   });
+
+  $(document).ready(function () {
+    $("#locality").select2({
+      width: "100%",
+    });
+  });
+  $(document).ready(function () {
+    $("#loc_street").select2({
+      width: "100%",
+    });
+  });
+
+  function activateSelect() {
+    const selectLocality = document.querySelector("#locality"),
+      buttonLocality = document.querySelector("#button_locality"),
+      selectLocStreet = document.querySelector("#loc_street"),
+      buttonLocStreet = document.querySelector("#button_loc_street");
+
+    // selectLocality.disabled = false;
+
+    if (selectLocality.disabled == true) {
+      buttonLocality.disabled = true;
+      selectLocStreet.disabled = true;
+      buttonLocStreet.disabled = true;
+    } else {
+      buttonLocality.disabled = false;
+      selectLocStreet.disabled = false;
+      buttonLocStreet.disabled = false;
+    }
+  }
+  activateSelect();
 }
 
-export default selects;
+// export default selects;

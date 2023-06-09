@@ -5,16 +5,25 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Графіки аварійних вимкнень по РЕМ-ах</title>
-
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="icon" type="image/png" href="img/logo.png" />
+    <!-- jquery -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/button.css" />
     <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="css/screens.css" />
   </head>
@@ -142,15 +151,16 @@
           <div class="container_forms_consumers">
             <div class="branch_pat">
               <p>Філія ПАТ:</p>
-              <form>
-                <select name="branch_pat" required>
-                  <option value="select_null"></option>
-                  <option
-                    class="option"
-                    selected
-                    value="select_rem"
-                    label="Виберіть РЕМ"
-                  ></option>
+              <div class="select-wrap_branch_pat">
+                <select
+                  id="branch_pat"
+                  name="branch_pat"
+                  placeholder="Виберіть РЕМ"
+                  required
+                >
+                  <option value="select_null" label="Виберіть РЕМ">
+                    виберіть РЕМ
+                  </option>
                   <option value="bog_p">Богородчанський РЕМ</option>
                   <option value="ver_p">Верховинський РЕМ</option>
                   <option value="gal_p">Галицький РЕМ</option>
@@ -169,15 +179,21 @@
                   <option value="tlu_p">Тлумацький РЕМ</option>
                   <option value="yar_p">Яремчанський РЕМ</option>
                 </select>
-              </form>
+              </div>
             </div>
             <div class="locality">
               <p>Населений пункт:</p>
               <form>
-                <select name="locality" required>
-                  <option label="Виберіть нас.пункт"></option>
+                <select id="locality" name="locality" required disabled="">
+                  <option label="Виберіть нас.пункт">виберіть нас.пункт</option>
                 </select>
-                <button class="what_a_queue" name="submit" type="submit">
+                <button
+                  id="button_locality"
+                  class="what_a_queue"
+                  name="submit"
+                  type="submit"
+                  disabled=""
+                >
                   <span class="text_button">Сформувати по нас. пункту</span>
                 </button>
               </form>
@@ -185,10 +201,16 @@
             <div class="loc_street">
               <p>Вулиця:</p>
               <form>
-                <select name="loc_street" required>
-                  <option label="Виберіть вулицю"></option>
+                <select id="loc_street" name="loc_street" required disabled="">
+                  <option label="Виберіть вулицю">виберіть вулицю</option>
                 </select>
-                <button class="what_a_queue" name="submit" type="submit">
+                <button
+                  id="button_loc_street"
+                  class="what_a_queue"
+                  name="submit"
+                  type="submit"
+                  disabled=""
+                >
                   <span class="text_button">Сформувати по вулиці</span>
                 </button>
               </form>
@@ -215,12 +237,16 @@
       </div>
     </div>
     <div class="overlay"></div>
-    <script type="module" src="/js/modules/modal.js"></script>
-    <script type="module" src="/js/modules/preloader.js"></script>
-    <script type="module" src="/js/modules/selects.js"></script>
-    <script type="module" src="/js/modules/inputs.js"></script>
-    <script type="module" src="/js/modules/date.js"></script>
-    <script type="module" src="/js/modules/tabs.js"></script>
-    <script type="module" src="/js/index.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <script type="text/javascript" src="/js/modules/modal.js"></script>
+    <script type="text/javascript" src="/js/modules/preloader.js"></script>
+    <script type="text/javascript" src="/js/modules/selects.js"></script>
+    <script type="text/javascript" src="/js/modules/inputs.js"></script>
+    <script type="text/javascript" src="/js/modules/date.js"></script>
+    <script type="text/javascript" src="/js/modules/tabs.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
   </body>
 </html>

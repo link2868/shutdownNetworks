@@ -1,4 +1,4 @@
-import preloader from "./preloader.js";
+// import preloader from "./preloader.js";
 
 const DefineQueue = async (data) => {
   const statusMessage = preloader();
@@ -30,6 +30,8 @@ const DefineQueue = async (data) => {
     document.body.style.overflow = "hidden";
 
     informPanel.innerHTML = "";
+
+    // informPanel.classList.remove("hide");
     informModal.innerHTML = `${result.current.note}`;
 
     // informPanel.innerHTML = `${result.current.note}`;
@@ -39,9 +41,13 @@ const DefineQueue = async (data) => {
     console.log("response " + response.status + "   " + response.statusText);
     // let result = await response.json();
     // informPanel.innerHTML = `${result.current.note}`;
+    // informPanel.classList.add("show");
+    // informPanel.classList.remove("hide");
 
     informPanel.innerHTML = "Пошук не дав результатів! Введіть коректні дані!";
+
     informPanel.scrollIntoView();
+
     statusMessage.remove();
   }
 };
@@ -114,4 +120,4 @@ function inputs() {
   formaPoNumber("#number");
   formPoaddress("#address");
 }
-export default inputs;
+// export default inputs;

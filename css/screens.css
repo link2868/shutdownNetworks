@@ -28,9 +28,11 @@
     justify-content: center;
   }
 
-  .locality {
-    margin-left: 0px;
-    margin-right: 0px;
+  .branch_pat,
+  .locality,
+  .loc_street {
+    width: 90%;
+    margin: 0 auto;
   }
   .modal_shutdown {
     display: block;
@@ -82,9 +84,11 @@
     justify-content: center;
   }
 
-  .locality {
-    margin-left: 0px;
-    margin-right: 0px;
+  .branch_pat,
+  .locality,
+  .loc_street {
+    width: 90%;
+    margin: 0 auto;
   }
   .modal_shutdown {
     display: block;
@@ -134,12 +138,15 @@
     display: block;
     flex-wrap: nowrap;
     justify-content: center;
-    padding-left: 40px;
+    padding-left: 20px;
+    padding-right: 20px;
   }
 
-  .locality {
-    margin-left: 0px;
-    margin-right: 0px;
+  .branch_pat,
+  .locality,
+  .loc_street {
+    width: 80%;
+    margin: 0 auto;
   }
   .modal_shutdown {
     display: block;
@@ -200,10 +207,10 @@
     flex-wrap: nowrap;
     justify-content: center;
   }
-
-  .locality {
-    margin-left: 0px;
-    margin-right: 0px;
+  .branch_pat,
+  .locality,
+  .loc_street {
+    width: 100%;
   }
 }
 
@@ -213,17 +220,19 @@
     justify-content: center;
   }
   .branch_pat {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 22px;
+    margin-right: 22px;
   }
-
+  .branch_pat {
+    width: 60%;
+  }
   .locality,
   .loc_street {
     width: 45%;
     flex: none;
   }
   .loc_street {
-    margin-right: 10px;
+    margin-left: 20px;
   }
 }
 
@@ -233,8 +242,11 @@
     justify-content: center;
   }
   .branch_pat {
-    margin-left: 20px;
-    margin-right: 20px;
+    margin-left: 22px;
+    margin-right: 22px;
+  }
+  .branch_pat {
+    width: 60%;
   }
   .locality,
   .loc_street {
@@ -242,7 +254,7 @@
     flex: none;
   }
   .loc_street {
-    margin-right: 10px;
+    margin-left: 20px;
   }
 }
 
@@ -255,14 +267,16 @@
     margin-left: 22px;
     margin-right: 22px;
   }
-
+  .branch_pat {
+    width: 60%;
+  }
   .locality,
   .loc_street {
     width: 45%;
     flex: none;
   }
   .loc_street {
-    margin-right: 10px;
+    margin-left: 20px;
   }
 }
 
