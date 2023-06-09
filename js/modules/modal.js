@@ -37,4 +37,4 @@ function modal() {
   );
   tomorrowPublished.innerHTML = "Опубліковано ____ Оновлено ";
 }
-export default modal;
+// export default modal;

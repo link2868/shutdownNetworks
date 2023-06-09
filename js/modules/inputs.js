@@ -1,4 +1,4 @@
-import preloader from "./preloader.js";
+// import preloader from "./preloader.js";
 
 const DefineQueue = async (data) => {
   const statusMessage = preloader();
@@ -120,4 +120,4 @@ function inputs() {
   formaPoNumber("#number");
   formPoaddress("#address");
 }
-export default inputs;
+// export default inputs;

@@ -14,4 +14,4 @@ function preloader() {
   return statusMessage;
 }
 
-export default preloader;
+// export default preloader;

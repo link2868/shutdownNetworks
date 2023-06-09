@@ -1,4 +1,4 @@
-import preloader from "./preloader.js";
+// import preloader from "./preloader.js";
 
 const parseXmlText = (xmlText) => {
   const parser = new DOMParser();
@@ -82,4 +82,4 @@ function selects() {
   activateSelect();
 }
 
-export default selects;
+// export default selects;

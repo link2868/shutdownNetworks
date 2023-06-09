@@ -37,4 +37,4 @@ function tabs(point, content, parent) {
   });
 }
 
-export default tabs;
+// export default tabs;
