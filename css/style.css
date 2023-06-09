@@ -1,8 +1,11 @@
-/* @import 'colors.css'; */
-
 body {
   font-family: "Roboto", sans-serif;
-  background: linear-gradient(to right, var(--light-carrot), var(--dark-white), var(--dark-carrot));
+  background: linear-gradient(
+    to right,
+    var(--light-carrot),
+    var(--dark-white),
+    var(--dark-carrot)
+  );
   max-width: 1900px;
   margin: 0 auto;
 }
@@ -10,6 +13,7 @@ body {
 .wrapper {
   margin: 0 auto;
   padding: 20px 80px 20px 80px;
+  position: relative;
 }
 
 .header {
@@ -66,10 +70,23 @@ h2 {
   margin-bottom: 5px;
 }
 
+.current_date_time {
+  max-width: 700px;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 13px;
+  color: var(--dark-grey);
+  text-align: center;
+  padding-left: 40px;
+  padding-right: 40px;
+  margin: auto;
+  margin-top: 5px;
+}
+
 .queue,
 .disabled_consumers {
   width: 50%;
-  min-height: 200px;
+  min-height: 300px;
   background-color: var(--gray);
   box-shadow: 0px 4px 4px var(--light-black);
   margin: 20px;
@@ -86,45 +103,25 @@ h2 {
   display: flex;
 }
 
-.tabs {
-  min-width: 100px;
-  padding-right: 50px;
-}
-
-.container_section {
-  min-width: 50%;
-}
-
-.tabs ul {
-  margin-top: 40px;
-  list-style: none;
-  padding-left: 0px;
-}
-
-.tabs li {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 12px;
-  color: var(--black);
-}
-
-.tabs_point {
-  display: block;
-  height: 20px;
-  padding-top: 12px;
-  padding-left: 5px;
-  border-bottom: solid 1px var(--light-carrot);
-  cursor: pointer;
-}
-
+/* Контент вікна "Інформація про графік погодинних вимкнень" */
 .container_section {
   display: flex;
 }
 
-.household,
-.juristic {
+.household {
+  width: 100%;
   padding-left: 20px;
   padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.juristic {
+  width: 100%;
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .all_consumers {
@@ -135,43 +132,14 @@ h2 {
   margin-right: auto;
 }
 
-.what_a_queue {
-  display: block;
-  height: 30px;
-  min-width: 90%;
-  border: solid 1px var(--light-carrot);
-  background-color: var(--dark-carrot);
-  border-radius: 30px;
-  margin-top: 20px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.text_button {
-  max-width: 700px;
-  font-style: normal;
-  font-weight: 300;
-  font-size: 13px;
-  color: var(--white);
-}
-.household {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-.juristic {
-  width: 100%;
-  padding-left: auto;
-  padding-right: auto;
-}
+/* Inputs */
 
 .household input,
 .juristic input,
 .all_consumers .address_city {
   padding-left: 5px;
   font-style: italic;
-  height: 25px;
+  height: 30px;
   border: solid 1px var(--dark-grey);
   border-radius: 5px;
   display: block;
@@ -188,7 +156,7 @@ h2 {
 .all_consumers .address_street {
   padding-left: 5px;
   font-style: italic;
-  height: 25px;
+  height: 30px;
   border: solid 1px var(--dark-grey);
   border-radius: 5px;
   margin-top: 5px;
@@ -200,7 +168,7 @@ h2 {
 .all_consumers .address_house {
   padding-left: 5px;
   font-style: italic;
-  height: 25px;
+  height: 30px;
   border: solid 1px var(--dark-grey);
   border-radius: 5px;
   margin-top: 5px;
@@ -214,17 +182,58 @@ input:focus {
   outline: 2px solid var(--dark-carrot);
 }
 
-.tabs .active {
-  background-color: var(--wheat);
+/* Контент вікна "Активні вимкнення споживачів" */
+
+.container_forms_consumers {
+  display: flex;
+  justify-content: space-between;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
+.branch_pat,
+.locality,
+.loc_street {
+  width: 30%;
+}
+
+/* select2 */
+
+.select2-container {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 14px;
+  color: var(--dark-grey);
+  cursor: pointer;
+}
+
+.select2-search__field {
+  outline: 2px solid var(--dark-carrot);
+  border-radius: 5px;
+}
+
+/* Інформаційна панель */
+
 .inform {
-  height: 40px;
+  display: block;
+  padding-left: 10px;
+  padding-right: 10px;
+  min-height: 60px;
   background-color: var(--dark-carrot);
   box-shadow: 0px 4px 4px var(--light-black);
   margin: 40px 20px 20px 20px;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  max-width: 100%;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--white);
 }
+
+/* Стилі для підключення */
 
 .show {
   display: block;
@@ -233,28 +242,3 @@ input:focus {
 .hide {
   display: none;
 }
-
-.fade {
-  animation-name: fade;
-  animation-duration: 1.2s;
-}
-
-@keyframes fade {
-  from {
-      opacity: 0.1;
-  } to {
-      opacity: 1;
-  }
-}
-
-/* .household {
-  display: display;
-}
-
-.juristic {
-  display: none;
-}
-
-.all_consumers {
-  display: none;
-} */

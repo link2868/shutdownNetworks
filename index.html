@@ -5,18 +5,27 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Графіки аварійних вимкнень по РЕМ-ах</title>
-
+    <!-- favicon -->
+    <link rel="icon" type="image/png" href="img/favicon.png" />
+    <!-- fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500&display=swap"
       rel="stylesheet"
     />
-
-    <link rel="icon" type="image/png" href="img/logo.png" />
+    <!-- jquery -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/css/select2.min.css"
+      rel="stylesheet"
+    />
+    <!-- my css -->
+    <link rel="stylesheet" href="css/modal.css" />
+    <link rel="stylesheet" href="css/button.css" />
     <link rel="stylesheet" href="css/colors.css" />
+    <link rel="stylesheet" href="css/tabs.css" />
     <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/screens.css">
+    <link rel="stylesheet" href="css/screens.css" />
   </head>
   <body>
     <div class="wrapper">
@@ -33,87 +42,211 @@
       </header>
       <section class="shotdovn">
         <div class="queue">
-          <h2>Інформація про графік погодинних вимкнень:</h2>
+          <h2>Інформація про графік погодинних вимкнень</h2>
+          <div class="current_date_time"></div>
           <div class="container_tabs">
             <div class="tabs">
               <ul class="tabs_parent">
-                <li class="tab_item"><span class="tabs_point active">Побутові</span></li>
-                <li class="tab_item"><span class="tabs_point">Юридичні</span></li>
-                <li class="tab_item"><span class="tabs_point">Усі споживачі</span></li>
+                <li class="tab_item">
+                  <span class="tabs_point active">Побутові</span>
+                </li>
+                <li class="tab_item">
+                  <span class="tabs_point">Юридичні</span>
+                </li>
+                <li class="tab_item">
+                  <span class="tabs_point">Усі споживачі</span>
+                </li>
               </ul>
             </div>
-           
-          <div class="container_section">
-            <div class="household tabcontent">
-              <p>Ваш особовий рахунок:</p>
-              <input
-                name="personal_account"
-                type="text"
-                required
-                placeholder="о/р"
-              />
-              <button class="what_a_queue" name="submit" type="submit">
-                <span class="text_button">Дізнатись чергу</span>
-              </button>
-            </div>
-            <div class="juristic tabcontent">
-              <p>Ваш № лічильника:</p>
-              <input
-                class="number"
-                name="counter_number"
-                type="text"
-                required
-                placeholder="номер лічильника"
-              />
-              <button class="what_a_queue" name="submit" type="submit">
-                <span class="text_button">Дізнатись чергу</span>
-              </button>
-            </div>
-            <div class="all_consumers tabcontent">
-              <p>Ваша адреса:</p>
-              <div class="container_address">
-                <div class="container_address_city">
-                  <input
-                    class="address_city"
-                    name="city"
-                    type="text"
-                    required
-                    placeholder="місто"
-                  />
-                </div>
-                <div class="address_street_house">
-                  <div class="container_address_street">
+
+            <div class="container_section">
+              <form id="account" class="household tabcontent">
+                <p>Ваш особовий рахунок:</p>
+                <input
+                  id="input"
+                  name="personal_account"
+                  type="text"
+                  required
+                  placeholder="о/р"
+                />
+                <button
+                  class="what_a_queue"
+                  data-modal
+                  name="submit"
+                  type="submit"
+                >
+                  <span class="text_button">Дізнатись чергу</span>
+                </button>
+              </form>
+              <form id="number" class="juristic tabcontent">
+                <p>Ваш № лічильника:</p>
+                <input
+                  id="input"
+                  class="number"
+                  name="counter_number"
+                  type="text"
+                  required
+                  placeholder="номер лічильника"
+                />
+                <button
+                  class="what_a_queue"
+                  data-modal
+                  name="submit"
+                  type="submit"
+                >
+                  <span class="text_button">Дізнатись чергу</span>
+                </button>
+              </form>
+              <form id="address" class="all_consumers tabcontent">
+                <p>Ваша адреса:</p>
+                <div class="container_address">
+                  <div class="container_address_city">
                     <input
-                      class="address_street"
-                      name="street"
+                      id="input"
+                      class="address_city"
+                      name="city"
                       type="text"
                       required
-                      placeholder="вулиця"
+                      placeholder="місто"
                     />
                   </div>
-                  <div class="container_address_house">
-                    <input
-                      class="address_house"
-                      name="house"
-                      type="text"
-                      required
-                      placeholder="буд."
-                    />
+                  <div class="address_street_house">
+                    <div class="container_address_street">
+                      <input
+                        id="input"
+                        class="address_street"
+                        name="street"
+                        type="text"
+                        required
+                        placeholder="вулиця"
+                      />
+                    </div>
+                    <div class="container_address_house">
+                      <input
+                        id="input"
+                        class="address_house"
+                        name="house"
+                        type="text"
+                        required
+                        placeholder="буд."
+                      />
+                    </div>
                   </div>
                 </div>
-              </div>
-              <button class="what_a_queue" name="submit" type="submit">
-                <span class="text_button">Дізнатись чергу</span>
-              </button>
+                <button
+                  class="what_a_queue"
+                  data-modal
+                  name="submit"
+                  type="submit"
+                >
+                  <span class="text_button">Дізнатись чергу</span>
+                </button>
+              </form>
             </div>
           </div>
-        </div> 
         </div>
-        <div class="disabled_consumers"></div>
+        <div class="disabled_consumers">
+          <h2>Активні вимкнення споживачів</h2>
+          <div class="current_date_time"></div>
+          <div class="container_forms_consumers">
+            <div class="branch_pat">
+              <p>Філія ПАТ:</p>
+              <div class="select-wrap_branch_pat">
+                <select
+                  id="branch_pat"
+                  name="branch_pat"
+                  placeholder="Виберіть РЕМ"
+                  required
+                >
+                  <option value="select_null" label="Виберіть РЕМ">
+                    виберіть РЕМ
+                  </option>
+                  <option value="bog_p">Богородчанський РЕМ</option>
+                  <option value="ver_p">Верховинський РЕМ</option>
+                  <option value="gal_p">Галицький РЕМ</option>
+                  <option value="gor_p">Городенківський РЕМ</option>
+                  <option value="dol_p">Долинський РЕМ</option>
+                  <option value="iv-fr_p">Івано-Франківський РЕМ</option>
+                  <option value="kal_p">Калуський РЕМ</option>
+                  <option value="kolm_p">Коломия місто РЕМ</option>
+                  <option value="kolr_p">Коломийський РЕМ</option>
+                  <option value="kos_p">Косівський РЕМ</option>
+                  <option value="lys_p">Лисецький РЕМ</option>
+                  <option value="nad_p">Надвірнянський РЕМ</option>
+                  <option value="rog_p">Рогатинський РЕМ</option>
+                  <option value="roz_p">Рожнятівський РЕМ</option>
+                  <option value="snj_p">Снятинський РЕМ</option>
+                  <option value="tlu_p">Тлумацький РЕМ</option>
+                  <option value="yar_p">Яремчанський РЕМ</option>
+                </select>
+              </div>
+            </div>
+            <div class="locality">
+              <p>Населений пункт:</p>
+              <form>
+                <select id="locality" name="locality" required disabled="">
+                  <option label="Виберіть нас.пункт">виберіть нас.пункт</option>
+                </select>
+                <button
+                  id="button_locality"
+                  class="what_a_queue"
+                  name="submit"
+                  type="submit"
+                  disabled=""
+                >
+                  <span class="text_button">Сформувати по нас. пункту</span>
+                </button>
+              </form>
+            </div>
+            <div class="loc_street">
+              <p>Вулиця:</p>
+              <form>
+                <select id="loc_street" name="loc_street" required disabled="">
+                  <option label="Виберіть вулицю">виберіть вулицю</option>
+                </select>
+                <button
+                  id="button_loc_street"
+                  class="what_a_queue"
+                  name="submit"
+                  type="submit"
+                  disabled=""
+                >
+                  <span class="text_button">Сформувати по вулиці</span>
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
       </section>
       <div class="inform"></div>
     </div>
-    <script type="module" src="/js/modules/tabs.js"></script>
-    <script type="module" src="/js/index.js"></script>
+    <div class="modal_active">
+      <div class="modal_close" data-close><img src="/img/close.png" /></div>
+      <div class="inform_modal"></div>
+      <div class="modal_shutdown">
+        <div class="shutdown_today">
+          <div class="shutdown_today schedule"></div>
+          <div class="shutdown_today information"></div>
+          <div class="shutdown_today published"></div>
+        </div>
+        <div class="shutdown_tomorrow">
+          <div class="shutdown_tomorrow schedule"></div>
+          <div class="shutdown_tomorrow information"></div>
+          <div class="shutdown_tomorrow published"></div>
+        </div>
+      </div>
+    </div>
+    <div class="overlay"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <script type="text/javascript" src="/js/modules/modal.js"></script>
+    <script type="text/javascript" src="/js/modules/preloader.js"></script>
+    <script type="text/javascript" src="/js/modules/selects.js"></script>
+    <script type="text/javascript" src="/js/modules/inputs.js"></script>
+    <script type="text/javascript" src="/js/modules/date.js"></script>
+    <script type="text/javascript" src="/js/modules/tabs.js"></script>
+    <script type="text/javascript" src="/js/index.js"></script>
   </body>
 </html>
