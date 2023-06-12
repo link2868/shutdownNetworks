@@ -1,7 +1,11 @@
 // import preloader from "./preloader.js";
 
 const DefineQueue = async (data) => {
-  const statusMessage = preloader();
+  const loader = document.querySelector(".loader");
+
+  loader.classList.add("show");
+  loader.classList.remove("hide");
+
   let response = await fetch(
     "https://svitlo.oe.if.ua/GAVTurnOff/GavGroupByAccountNumber",
     {
@@ -16,8 +20,7 @@ const DefineQueue = async (data) => {
   const informPanel = document.querySelector(".inform"),
     overlay = document.querySelector(".overlay"),
     modalActive = document.querySelector(".modal_active"),
-    informModal = document.querySelector(".inform_modal"),
-    informToday = document.querySelector(".shutdown_today.information");
+    informModal = document.querySelector(".inform_modal");
 
   if (response.ok) {
     console.log("Post successfully created!");
@@ -31,24 +34,18 @@ const DefineQueue = async (data) => {
 
     informPanel.innerHTML = "";
 
-    // informPanel.classList.remove("hide");
     informModal.innerHTML = `${result.current.note}`;
 
-    // informPanel.innerHTML = `${result.current.note}`;
-    // informPanel.scrollIntoView();
-    statusMessage.remove();
+    loader.classList.add("hide");
+    loader.classList.remove("show");
   } else {
     console.log("response " + response.status + "   " + response.statusText);
-    // let result = await response.json();
-    // informPanel.innerHTML = `${result.current.note}`;
-    // informPanel.classList.add("show");
-    // informPanel.classList.remove("hide");
 
     informPanel.innerHTML = "Пошук не дав результатів! Введіть коректні дані!";
 
     informPanel.scrollIntoView();
-
-    statusMessage.remove();
+    loader.classList.add("hide");
+    loader.classList.remove("show");
   }
 };
 
