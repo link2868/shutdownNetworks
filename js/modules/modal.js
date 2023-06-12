@@ -1,20 +1,7 @@
 function modal() {
-  const modalOn = document.querySelectorAll("[data-modal]"),
-    modalOff = document.querySelector("[data-close]"),
+  const modalOff = document.querySelector("[data-close]"),
     modalActive = document.querySelector(".modal_active"),
     overlay = document.querySelector(".overlay");
-
-  // modalOn.forEach((btn) => {
-  //   btn.addEventListener("click", modalOupen);
-  // });
-
-  // function modalOupen() {
-  //   modalActive.classList.add("show");
-  //   modalActive.classList.remove("hide");
-  //   overlay.classList.add("show");
-  //   overlay.classList.remove("hide");
-  //   document.body.style.overflow = "hidden";
-  // }
 
   function modalClose() {
     modalActive.classList.add("hide");

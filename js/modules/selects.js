@@ -9,7 +9,9 @@ const parseXmlText = (xmlText) => {
 
 const disconnectionByBranch = (url) => {
   const informPanel = document.querySelector(".inform"),
-    statusMessage = preloader();
+    loader = document.querySelector(".loader");
+  loader.classList.add("show");
+  loader.classList.remove("hide");
 
   fetch(url)
     .then((response) => {
@@ -26,10 +28,12 @@ const disconnectionByBranch = (url) => {
       informPanel.scrollIntoView();
     })
     .finally(() => {
-      statusMessage.remove();
+      loader.classList.add("hide");
+      loader.classList.remove("show");
+
       setTimeout(() => {
         informPanel.innerHTML = "";
-      }, 5000);
+      }, 6000);
     });
 };
 
@@ -37,8 +41,6 @@ function selects() {
   $(document).ready(function () {
     $("#branch_pat").select2({
       width: "100%",
-      // minimumResultsForSearch: Infinity,
-      // maximumSelectionLength: 1,
     });
     $("#branch_pat").on("change", function () {
       const selectBranch = $("#branch_pat option:selected").val();
@@ -66,8 +68,6 @@ function selects() {
       buttonLocality = document.querySelector("#button_locality"),
       selectLocStreet = document.querySelector("#loc_street"),
       buttonLocStreet = document.querySelector("#button_loc_street");
-
-    // selectLocality.disabled = false;
 
     if (selectLocality.disabled == true) {
       buttonLocality.disabled = true;
